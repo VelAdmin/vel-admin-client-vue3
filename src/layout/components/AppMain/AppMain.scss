@@ -1,0 +1,15 @@
+.app-main {
+  width: 100%;
+  background-color: var(--h-body-bg-color);
+  display: flex;
+}
+
+.app-scrollbar {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  .app-container-grow {
+    flex-grow: 1;
+  }
+}

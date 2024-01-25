@@ -1,0 +1,15 @@
+
+.el-breadcrumb__inner a {
+  font-weight: 400 !important;
+}
+
+.app-breadcrumb  {
+  display: inline-block;
+  font-size: 14px;
+  line-height: var(--h-navigationbar-height);
+  margin-left: 8px;
+  .no-redirect {
+    color: #97a8be;
+    cursor: text;
+  }
+}

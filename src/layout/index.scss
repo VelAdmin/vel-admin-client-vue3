@@ -1,0 +1,20 @@
+.app-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.main-container {
+  flex: 1;
+}
+
+.hideSidebar {
+  .side-bar-container {
+    width: var(--h-sidebar-hide-width) !important;
+
+    :deep(.el-menu--collapse) {
+
+    }
+  }
+}
+

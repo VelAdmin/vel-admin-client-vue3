@@ -1,0 +1,33 @@
+// 全局 CSS 变量
+@import "./variables.css";
+// Element Plus
+@import "./element-plus.scss";
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--h-body-bg-color);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+
+div:focus {
+    outline: none;
+}

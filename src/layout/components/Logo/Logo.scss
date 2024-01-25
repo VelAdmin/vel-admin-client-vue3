@@ -1,0 +1,40 @@
+.sidebar-logo-container {
+  position: relative;
+  height: 48px;
+  overflow: hidden;
+  padding-left: 10px;
+
+  .sidebar-logo-link {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+  }
+
+  .sidebar-logo {
+    display: inline-block;
+    height: 40px;
+  }
+
+  .sidebar-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+  }
+}
+
+
+.collapse {
+  .sidebar-logo {
+    vertical-align: middle;
+  }
+  .sidebar-title {
+    display: none;
+  }
+}

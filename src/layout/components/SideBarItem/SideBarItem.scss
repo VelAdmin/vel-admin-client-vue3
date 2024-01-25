@@ -1,0 +1,14 @@
+
+
+.simple-mode {
+  &.first-level {
+    :deep(.el-sub-menu) {
+      .el-sub-menu__icon-arrow {
+        display: none;
+      }
+      span {
+        visibility: hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+$transition-time: 0.35s;
+
+.side-bar-container {
+  background-color: var(--h-sidebar-menu-bg-color);
+  box-shadow: 0 0 1px #888;
+  transition: width $transition-time;
+  width: var(--h-sidebar-width) !important;
+  height: 100vh;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
