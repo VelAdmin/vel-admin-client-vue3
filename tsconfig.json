@@ -24,7 +24,10 @@
     "types": [
       "node",
       "vite/client",
-      /** Element Plus 的 Volar 插件支持 */
+      /**
+       * Element Plus 的 Volar 插件支持
+       * Volar plug-in support for Element Plus
+      */
       "element-plus/global",
       "vitest"
     ],
@@ -43,7 +46,10 @@
     "vite.config.ts",
     "vitest.config.ts"
   ],
-  /** 编译器默认排除的编译文件 */
+  /**
+  * 编译器默认排除的编译文件
+  * Compiled files excluded by default by the compiler
+  */
   "exclude": ["node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

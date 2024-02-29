@@ -4,7 +4,7 @@
     <div class="login-box">
       <div class="login-form">
         <img class="logo" src="/logo.png" alt=""/>
-        <h2>HAdmin</h2>
+        <h2>VelAdmin</h2>
         <el-form ref="loginFormRef" size="large" :model="loginData" :rules="loginFormRules" @keyup.enter="handleLogin">
           <el-form-item prop="phone">
             <el-input :prefix-icon="User" v-model="loginData.phone" placeholder="请输入"/>

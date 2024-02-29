@@ -4,14 +4,20 @@ import {setRouteChange} from "@/hooks/useRouteListener.ts";
 import {getToken} from "@/utils/cookies.ts";
 import {ElMessage} from "element-plus";
 import {useUserStore} from "@/store/modules/user.ts";
+import {NO_LOGIN_WHITE_LIST} from "@/config/config.ts";
 
 router.beforeEach(async (to, _from, next) => {
   const token = getToken()
 
   // 判断该用户是否已经登录
   if (!token) {
-    // 其他没有访问权限的页面将被重定向到登录页面
-    next("/login")
+    // 如果在免登录的白名单中，则直接进入
+    if (NO_LOGIN_WHITE_LIST.includes(to.path)) {
+      next()
+    } else {
+      // 其他没有访问权限的页面将被重定向到登录页面
+      next("/login")
+    }
     return
   }
 
@@ -19,6 +25,7 @@ router.beforeEach(async (to, _from, next) => {
   if (to.path === "/login") {
     return next({ path: "/" })
   }
+
 
   try {
     // 计算动态用户权限
@@ -30,6 +37,7 @@ router.beforeEach(async (to, _from, next) => {
     permissionStore.dynamicRoutes.forEach((route) => router.addRoute(route))
     next()
   } catch (err: any) {
+    console.log(err, 444)
     // 过程中发生任何错误，都直接重置 Token，并重定向到登录页面
     useUserStore().logout()
     ElMessage.error(err.message || "路由守卫过程发生错误")
